@@ -165,7 +165,9 @@ const Index = () => {
                   alt="WhatsApp"
                   className="w-5 h-5 sm:w-6 sm:h-6"
                 />
-                <span className="whitespace-nowrap text-xs sm:text-base">Order on WhatsApp</span>
+                <span className="whitespace-nowrap text-xs sm:text-base">
+                  Order on WhatsApp
+                </span>
               </motion.a>
               <Link to="/menu">
                 <motion.span
@@ -218,7 +220,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
@@ -251,7 +253,7 @@ const Index = () => {
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               className="relative"
