@@ -53,7 +53,7 @@ const ProductCard = ({ name, image, price, description, delay = 0 }: ProductCard
           whileTap={{ scale: 0.97 }}
           className="mt-auto w-full flex items-center justify-center gap-2 bg-whatsapp text-whatsapp-foreground py-2.5 rounded-lg font-medium text-sm transition-colors hover:brightness-110"
         >
-          <MessageCircle size={16} /> Order on WhatsApp
+           <img src="/whatsapp.png" alt="WhatsApp" className="w-6 h-6" /> Order on WhatsApp
         </motion.a>
       </div>
     </motion.div>

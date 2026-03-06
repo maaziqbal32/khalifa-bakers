@@ -16,7 +16,7 @@ const WhatsAppFab = () => {
         whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.95 }}
       >
-        <MessageCircle size={20} />
+      <img src="/whatsapp.png" alt="WhatsApp" className="w-10 h-10" />
         Order Now +923001234567
       </motion.a>
 
@@ -30,7 +30,7 @@ const WhatsAppFab = () => {
         whileTap={{ scale: 0.95 }}
         aria-label="Order on WhatsApp"
       >
-        <MessageCircle size={28} />
+       <img src="/whatsapp.png" alt="WhatsApp" className="w-10 h-10" />
       </motion.a>
     </>
   );
