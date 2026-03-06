@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 38% 95%;
+    --foreground: 20 30% 15%;
+
+    --card: 33 40% 97%;
+    --card-foreground: 20 30% 15%;
+
+    --popover: 33 40% 97%;
+    --popover-foreground: 20 30% 15%;
+
+    --primary: 25 48% 28%;
+    --primary-foreground: 33 50% 95%;
+
+    --secondary: 33 30% 90%;
+    --secondary-foreground: 20 30% 15%;
+
+    --muted: 30 25% 92%;
+    --muted-foreground: 20 15% 45%;
+
+    --accent: 40 65% 50%;
+    --accent-foreground: 20 30% 12%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 25% 86%;
+    --input: 30 25% 86%;
+    --ring: 25 48% 28%;
+
+    --radius: 0.75rem;
+
+    --whatsapp: 142 70% 40%;
+    --whatsapp-foreground: 0 0% 100%;
+
+    --warm-cream: 33 50% 95%;
+    --warm-brown: 20 30% 20%;
+    --golden: 40 65% 50%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'DM Sans', sans-serif;
+    --font-montserrat: 'Montserrat', sans-serif;  /* 👈 Montserrat added */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .bakery-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .gradient-warm {
+    background: linear-gradient(135deg, hsl(var(--warm-cream)), hsl(var(--background)));
+  }
+
+  .gradient-golden {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--golden)));
+  }
+
+  .shadow-bakery {
+    box-shadow: 0 10px 40px -10px hsl(var(--primary) / 0.12);
+  }
+
+  .shadow-bakery-hover {
+    box-shadow: 0 20px 60px -10px hsl(var(--primary) / 0.22);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(-5deg); }
+}
+
+@keyframes pulse-whatsapp {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 hsl(var(--whatsapp) / 0.4); }
+  50% { transform: scale(1.05); box-shadow: 0 0 0 15px hsl(var(--whatsapp) / 0); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
