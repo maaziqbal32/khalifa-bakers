@@ -17,7 +17,6 @@ import plainNaanKhatai from "/plan.png";
 import burfiToffee from "/toffee.png";
 import bakarKhani from "/bakar.png";
 import cakeRusk from "/cake-rusk.png";
-
 import panjeeri from "/panjeeri.png";
 
 const featuredProducts = [
@@ -113,6 +112,7 @@ const Index = () => {
             src={heroBakery}
             alt="Khalifa Bakers – Traditional Nan Khatai bakery in Lahore"
             className="w-full h-full object-cover"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/50 to-transparent" />
         </div>
@@ -129,12 +129,14 @@ const Index = () => {
           </motion.div>
         ))}
 
-        <div className="relative bakery-container py-16 sm:py-0">
+        {/* Added responsive horizontal padding */}
+        <div className="relative bakery-container px-4 sm:px-6 py-16 sm:py-0">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-xl"
+            // Fixed: use responsive max-width so text fits on small screens
+            className="max-w-full sm:max-w-xl"
           >
             <motion.span
               initial={{ opacity: 0, x: -20 }}
@@ -189,7 +191,8 @@ const Index = () => {
 
       {/* Featured Products */}
       <section className="section-padding gradient-warm">
-        <div className="bakery-container">
+        {/* Added responsive horizontal padding */}
+        <div className="bakery-container px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -202,7 +205,8 @@ const Index = () => {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-2">
               Featured Products
             </h2>
-            <p className="text-muted-foreground mt-3 max-w-md mx-auto">
+            {/* Fixed: responsive max-width for paragraph */}
+            <p className="text-muted-foreground mt-3 max-w-full sm:max-w-md mx-auto">
               Hand-crafted with love using traditional family recipes since 1925
             </p>
           </motion.div>
@@ -216,14 +220,10 @@ const Index = () => {
 
       {/* Our Heritage */}
       <section className="section-padding">
+        {/* Added responsive horizontal padding */}
         <div className="bakery-container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
+            <div>
               <span className="text-primary font-medium text-sm uppercase tracking-wider">
                 Our Heritage
               </span>
@@ -250,21 +250,34 @@ const Index = () => {
                   Read Our Story <ArrowRight size={18} />
                 </motion.span>
               </Link>
-            </motion.div>
+            </div>
             <motion.div
-              initial={{ opacity: 0, x: 40 }}
+              initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative"
+              className="relative w-full"
             >
               <img
                 src={heroBakery}
                 alt="Khalifa Bakers heritage – traditional bakery at Mochi Gate Lahore"
-                className="rounded-2xl shadow-bakery w-full object-cover aspect-[4/3]"
+                className="w-full rounded-2xl shadow-bakery object-cover"
                 loading="lazy"
               />
-              <div className="absolute -bottom-4 -left-4 bg-accent text-accent-foreground rounded-xl px-5 py-3 shadow-lg font-display font-bold text-lg">
+
+              {/* Badge */}
+              <div
+                className="
+      absolute
+      bottom-3 left-3
+      bg-accent text-accent-foreground
+      rounded-lg
+      px-3 py-1.5
+      shadow-lg
+      font-display font-bold
+      text-xs sm:text-sm md:text-base
+    "
+              >
                 Est. 1925
               </div>
             </motion.div>
@@ -274,7 +287,8 @@ const Index = () => {
 
       {/* Best Sellers Carousel */}
       <section className="section-padding gradient-warm">
-        <div className="bakery-container">
+        {/* Added responsive horizontal padding */}
+        <div className="bakery-container px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -345,7 +359,8 @@ const Index = () => {
 
       {/* Quick Links */}
       <section className="section-padding">
-        <div className="bakery-container">
+        {/* Added responsive horizontal padding */}
+        <div className="bakery-container px-4 sm:px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
@@ -399,7 +414,8 @@ const Index = () => {
 
       {/* Testimonials */}
       <section className="section-padding gradient-warm">
-        <div className="bakery-container">
+        {/* Added responsive horizontal padding */}
+        <div className="bakery-container px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
