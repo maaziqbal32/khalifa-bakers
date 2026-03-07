@@ -4,6 +4,26 @@
 @tailwind components;
 @tailwind utilities;
 
+
+html {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 @layer base {
   :root {
     --background: 30 38% 95%;
@@ -76,6 +96,14 @@
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
+  .navbar-container {
+    @apply w-screen flex items-center justify-between overflow-hidden;
+  }
+
+  nav[role="navigation"] {
+    @apply w-screen;
+  }
+
   .section-padding {
     @apply py-8 md:py-12;
   }
@@ -120,4 +148,10 @@
 @keyframes shimmer {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
+}
+
+@layer utilities {
+  .contain-layout {
+    contain: layout style paint;
+  }
 }
