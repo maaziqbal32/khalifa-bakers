@@ -1,14 +1,16 @@
 import { motion } from "framer-motion";
-import { MessageCircle, Phone, MapPin, Mail } from "lucide-react";
+import { Phone, MapPin, Mail } from "lucide-react";
 import { useState } from "react";
-
 const ContactPage = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const text = `Hi Khalifa Bakers! My name is ${form.name}. ${form.message}`;
-    window.open(`https://wa.me/923001234567?text=${encodeURIComponent(text)}`, "_blank");
+    window.open(
+      `https://wa.me/923127079861?text=${encodeURIComponent(text)}`,
+      "_blank",
+    );
   };
 
   return (
@@ -17,13 +19,17 @@ const ContactPage = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-12"
+          className="text-center mb-6 sm:mb-12"
         >
-          <span className="text-primary font-medium text-sm uppercase tracking-wider">Get in Touch</span>
+          <span className="text-primary font-medium text-sm uppercase tracking-wider">
+            Get in Touch
+          </span>
           <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mt-2">
             Contact Us
           </h1>
-          <p className="text-muted-foreground mt-3">We'd love to hear from you!</p>
+          <p className="text-muted-foreground mt-3">
+            We'd love to hear from you!
+          </p>
         </motion.div>
 
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -35,10 +41,34 @@ const ContactPage = () => {
             className="space-y-6"
           >
             {[
-              { icon: MessageCircle, label: "WhatsApp", value: "+92 300 1234567", href: "https://wa.me/923001234567", color: "bg-whatsapp text-whatsapp-foreground" },
-              { icon: Phone, label: "Phone", value: "+92 300 1234567", href: "tel:+923001234567", color: "bg-primary text-primary-foreground" },
-              { icon: Mail, label: "Email", value: "info@khalifabakers.com", href: "mailto:info@khalifabakers.com", color: "bg-accent text-accent-foreground" },
-              { icon: MapPin, label: "Address", value: "Mochi Gate, Lahore", href: "#map", color: "bg-secondary text-secondary-foreground" },
+              {
+                icon: "/whatsapp.png",
+                label: "WhatsApp",
+                value: "+92 300 1234567",
+                href: "https://wa.me/923127079861",
+                color: "bg-whatsapp text-whatsapp-foreground",
+              },
+              {
+                icon: Phone,
+                label: "Phone",
+                value: "+92 300 1234567",
+                href: "tel:+923127079861",
+                color: "bg-primary text-primary-foreground",
+              },
+              {
+                icon: Mail,
+                label: "Email",
+                value: "info@khalifabakers.com",
+                href: "https://mail.google.com/mail/?view=cm&fs=1&to=info@khalifabakers.com",
+                color: "bg-accent text-accent-foreground",
+              },
+              {
+                icon: MapPin,
+                label: "Address",
+                value: "Mochi Gate, Lahore",
+                href: "#map",
+                color: "bg-secondary text-secondary-foreground",
+              },
             ].map((item, i) => (
               <motion.a
                 key={item.label}
@@ -53,7 +83,11 @@ const ContactPage = () => {
                 className="flex items-center gap-4 bg-card rounded-xl p-4 shadow-bakery hover:shadow-bakery-hover transition-shadow"
               >
                 <div className={`p-3 rounded-xl ${item.color}`}>
-                  <item.icon size={20} />
+                  {typeof item.icon === "string" ? (
+                    <img src={item.icon} alt={item.label} className="w-6 h-6" />
+                  ) : (
+                    <item.icon size={20} />
+                  )}
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">{item.label}</p>
@@ -71,7 +105,9 @@ const ContactPage = () => {
             viewport={{ once: true }}
             className="bg-card rounded-2xl p-8 shadow-bakery space-y-4"
           >
-            <h3 className="font-display text-xl font-semibold text-foreground mb-2">Send us a message</h3>
+            <h3 className="font-display text-xl font-semibold text-foreground mb-2">
+              Send us a message
+            </h3>
             <input
               type="text"
               placeholder="Your Name"
@@ -101,7 +137,8 @@ const ContactPage = () => {
               whileTap={{ scale: 0.98 }}
               className="w-full bg-whatsapp text-whatsapp-foreground py-3 rounded-lg font-semibold flex items-center justify-center gap-2"
             >
-              <MessageCircle size={18} /> Send via WhatsApp
+              <img src="/whatsapp.png" alt="WhatsApp" className="w-7 h-7" />{" "}
+              Send via WhatsApp
             </motion.button>
           </motion.form>
         </div>

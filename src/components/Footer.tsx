@@ -42,13 +42,13 @@ const Footer = () => (
           </h4>
           <div className="flex flex-col gap-3 text-sm sm:text-base text-primary-foreground/70">
             <a
-              href="https://wa.me/923001234567"
+              href="https://wa.me/923127079861"
               className="flex items-center gap-2 hover:text-primary-foreground transition-colors"
             >
               <MessageCircle size={16} /> WhatsApp Order
             </a>
             <a
-              href="tel:+923001234567"
+              href="tel:+923127079861"
               className="flex items-center gap-2 hover:text-primary-foreground transition-colors"
             >
               <Phone size={16} /> +92 300 1234567

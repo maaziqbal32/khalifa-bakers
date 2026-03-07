@@ -15,10 +15,10 @@ const AboutPage = () => (
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-center mb-16"
+        className="text-center mb-8 sm:mb-16"
       >
         <span className="text-primary font-medium text-sm uppercase tracking-wider">Our Heritage</span>
-        <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mt-2">
+        <h1 className="font-display text-3xl md:text-5xl font-bold text-foreground mt-2">
           About Khalifa Bakers
         </h1>
         <p className="text-muted-foreground mt-3">A legacy of baking excellence since 1925</p>

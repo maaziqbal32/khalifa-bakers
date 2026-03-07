@@ -45,7 +45,7 @@ const featuredProducts = [
     description: "Half box of our classic delight",
   },
   {
-    name: "Burfi Toffee",
+    name: "Butter Toffee",
     image: burfiToffee,
     price: "Rs 800",
     description: "Traditional milk fudge sweets",
@@ -155,7 +155,7 @@ const Index = () => {
             </p>
             <div className="flex flex-nowrap gap-2 sm:gap-4">
               <motion.a
-                href="https://wa.me/923001234567?text=Hello%20Khalifa%20Bakers%2C%20I%20would%20like%20to%20place%20an%20order.%0A%0AProduct%3A%0AQuantity%3A%0ADelivery%20Address%3A"
+                href="https://wa.me/923127079861?text=Hello%20Khalifa%20Bakers%2C%20I%20would%20like%20to%20place%20an%20order.%0A%0AProduct%3A%0AQuantity%3A%0ADelivery%20Address%3A"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
@@ -336,7 +336,7 @@ const Index = () => {
                   </h3>
                   <p className="text-primary font-bold mt-1">{item.price}</p>
                   <motion.a
-                    href={`https://wa.me/923001234567?text=Hi!%20I%20would%20like%20to%20order%20${encodeURIComponent(item.name)}.`}
+                    href={`https://wa.me/923127079861?text=Hi!%20I%20would%20like%20to%20order%20${encodeURIComponent(item.name)}.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.03 }}
