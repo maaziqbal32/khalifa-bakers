@@ -51,7 +51,7 @@ const Footer = () => (
               href="tel:+923127079861"
               className="flex items-center gap-2 hover:text-primary-foreground transition-colors"
             >
-              <Phone size={16} /> +92 300 1234567
+              <Phone size={16} /> +92 312 7079861
             </a>
             <span className="flex items-center gap-2">
               <MapPin size={16} /> Mochi Gate, Lahore
@@ -59,9 +59,10 @@ const Footer = () => (
           </div>
         </div>
       </div>
-      <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground/50">
+      <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm sm:text-lg text-primary-foreground/60">
         <p className="flex items-center justify-center gap-1">
-          Made with Khalifa Bakers © {new Date().getFullYear()}
+          © {new Date().getFullYear()} Khalifa Bakers • Freshly baked with care
+          🥐
         </p>
       </div>
     </div>
