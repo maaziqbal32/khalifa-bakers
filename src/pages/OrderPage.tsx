@@ -7,14 +7,12 @@ const OrderPage = () => {
   const [form, setForm] = useState({
     name: "",
     order: "",
-    quantity: "1",
-    delivery: "delivery",
     special: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const text = `🧁 *New Order - Khalifa Bakers*\n\n👤 *Name:* ${form.name}\n📦 *Order:* ${form.order}\n🔢 *Quantity:* ${form.quantity}\n🚗 *Type:* ${form.delivery === "delivery" ? "Delivery" : "Pickup"}\n📝 *Special Requests:* ${form.special || "None"}\n\nPlease confirm my order. Thank you! 💛`;
+    const text = `🍪 *New Order - Khalifa Bakers*\n\n👤 *Name:* ${form.name}\n📦 *Order:* ${form.order}\n🔢\n📝 *Special Requests:* ${form.special || "None"}\n\nPlease confirm my order. Thank you! 😊`;
     window.open(
       `https://wa.me/923127079861?text=${encodeURIComponent(text)}`,
       "_blank",
@@ -77,47 +75,6 @@ const OrderPage = () => {
                 placeholder="e.g., 1 Full Box Almond Naan Khatai, 2 Cake Rusk"
                 required
               />
-            </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-1.5">
-                  Quantity
-                </label>
-                <input
-                  type="number"
-                  min="1"
-                  value={form.quantity}
-                  onChange={(e) =>
-                    setForm({ ...form, quantity: e.target.value })
-                  }
-                  className="w-full bg-secondary text-secondary-foreground rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-muted-foreground"
-                />
-              </div>
-
-              {/* ... rest of your form ... */}
-
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-1.5">
-                  Delivery / Pickup
-                </label>
-                <div className="relative">
-                  <select
-                    value={form.delivery}
-                    onChange={(e) =>
-                      setForm({ ...form, delivery: e.target.value })
-                    }
-                    className="w-full bg-secondary text-secondary-foreground rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary appearance-none pr-10"
-                  >
-                    <option value="delivery">🚗 Delivery</option>
-                    <option value="pickup">🏪 Pickup</option>
-                  </select>
-                  <ChevronDown
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground pointer-events-none"
-                    size={18}
-                  />
-                </div>
-              </div>
             </div>
 
             <div>
