@@ -11,13 +11,14 @@ import {
 import ProductCard from "@/components/ProductCard";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 
-import heroBakery from "@/assets/hero-khalifa.png";
+// import heroBakery from "@/assets/hero-khalifa.png";
 import almondNaanKhatai from "/almond.png";
 import plainNaanKhatai from "/plan.png";
 import burfiToffee from "/toffee.png";
 import bakarKhani from "/bakar.png";
 import cakeRusk from "/cake-rusk.png";
 import panjeeri from "/panjeeri.png";
+import mochiGate from "/mochi-gate.png";
 
 const featuredProducts = [
   {
@@ -109,7 +110,7 @@ const Index = () => {
       <section className="relative min-h-[100vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={heroBakery}
+            src={mochiGate}
             alt="Khalifa Bakers – Traditional Nan Khatai bakery in Lahore"
             className="w-full h-full object-cover"
             loading="lazy"
@@ -259,7 +260,7 @@ const Index = () => {
               className="relative w-full"
             >
               <img
-                src={heroBakery}
+                src={mochiGate}
                 alt="Khalifa Bakers heritage – traditional bakery at Mochi Gate Lahore"
                 className="w-full rounded-2xl shadow-bakery object-cover"
                 loading="lazy"

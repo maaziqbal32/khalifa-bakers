@@ -3,10 +3,27 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 
 const testimonials = [
-  { name: "Ayesha K.", text: "Best Nan Khatai in Lahore! The almond ones are absolutely divine. My family orders every week! 💛", rating: 5 },
-  { name: "Ahmed R.", text: "Khalifa Bakers never disappoints. Fresh, flavorful, and delivered right to my door via WhatsApp ordering. So easy!", rating: 5 },
-  { name: "Fatima S.", text: "The Bakar Khani is crispy perfection! And their Cake Rusk is perfect with chai. Highly recommend!", rating: 5 },
-  { name: "Hassan M.", text: "Very fresh cake rusk and delicious bakery items. Ordering from Mochi Gate has never been easier!", rating: 5 },
+  { name: "Ayesha K.", text: "Lahore ki sab se behtreen Nan Khatai! Badam wali bilkul lajawab hai. Meri family har week order karti hai! 💛", rating: 5 },
+  { name: "Ahmed R.", text: "Khalifa Bakers kabhi disappoint nahi karte. Fresh aur bohat tasty, aur WhatsApp se seedha ghar tak delivery. Bohat easy!", rating: 5 },
+  { name: "Fatima S.", text: "Bakar Khani bilkul crispy aur perfect hai! Aur unka Cake Rusk chai ke sath zabardast lagta hai. Must try!", rating: 5 },
+  { name: "Hassan M.", text: "Bohat fresh Cake Rusk aur delicious bakery items. Mochi Gate se order karna ab bohat asaan ho gaya hai!", rating: 5 },
+
+  { name: "Ali Z.", text: "Nan Khatai ka taste bilkul purana Lahore yaad dila deta hai. Bohat zabardast!", rating: 5 },
+  { name: "Sara T.", text: "Cake Rusk chai ke sath perfect hai. Ghar walon ko bhi bohat pasand aya.", rating: 5 },
+  { name: "Usman A.", text: "Delivery fast thi aur bakery items bilkul fresh thay. Definitely dubara order karunga.", rating: 5 },
+  { name: "Hira M.", text: "Badam Nan Khatai meri favorite hai. Taste aur quality dono amazing hain.", rating: 5 },
+  { name: "Bilal H.", text: "Khalifa Bakers ki Bakar Khani sach mein crispy aur tasty hai. Highly recommended!", rating: 5 },
+  { name: "Zainab F.", text: "Har dafa same fresh taste milta hai. Quality kabhi change nahi hoti.", rating: 5 },
+  { name: "Omar S.", text: "Mochi Gate ki classic bakery taste yahan mil jata hai. Bohat acha experience tha.", rating: 5 },
+  { name: "Maryam A.", text: "Nan Khatai itni soft aur tasty thi ke sab ne enjoy ki. Must try!", rating: 5 },
+  { name: "Hamza Q.", text: "WhatsApp se order karna bohat easy hai aur delivery bhi time par milti hai.", rating: 5 },
+  { name: "Sana K.", text: "Cake Rusk bilkul perfect bake hua tha. Chai ke sath best combination.", rating: 5 },
+  { name: "Adnan R.", text: "Purani Lahore wali bakery ka asli taste. Bohat hi lajawab!", rating: 5 },
+  { name: "Iqra N.", text: "Fresh bakery items aur bohat acha customer service. Mujhe bohat pasand aya.", rating: 5 },
+  { name: "Danish P.", text: "Family gathering ke liye order kiya tha, sab ko Nan Khatai bohat pasand ayi.", rating: 5 },
+  { name: "Rabia S.", text: "Quality aur taste dono outstanding hain. Definitely recommend karungi.", rating: 5 },
+  { name: "Shahzaib M.", text: "Bakar Khani aur Cake Rusk dono zabardast thay. Lahore mein best bakery!", rating: 5 },
+  { name: "Nadia I.", text: "Simple, fresh aur bohat tasty bakery items. Har bite mein maza aya.", rating: 5 },
 ];
 
 const TestimonialCarousel = () => {
@@ -16,6 +33,24 @@ const TestimonialCarousel = () => {
     const timer = setInterval(() => setCurrent((c) => (c + 1) % testimonials.length), 5000);
     return () => clearInterval(timer);
   }, []);
+
+  const maxDots = 10;
+
+  const getVisibleDots = () => {
+    if (testimonials.length <= maxDots) {
+      return testimonials.map((_, i) => i);
+    }
+
+    let start = Math.max(0, current - Math.floor(maxDots / 2));
+    let end = start + maxDots;
+
+    if (end > testimonials.length) {
+      end = testimonials.length;
+      start = end - maxDots;
+    }
+
+    return Array.from({ length: end - start }, (_, i) => start + i);
+  };
 
   return (
     <div className="relative max-w-2xl mx-auto">
@@ -46,7 +81,7 @@ const TestimonialCarousel = () => {
           <ChevronLeft size={20} />
         </button>
         <div className="flex items-center gap-2">
-          {testimonials.map((_, i) => (
+          {getVisibleDots().map((_, i) => (
             <button
               key={i}
               onClick={() => setCurrent(i)}
