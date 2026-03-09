@@ -112,7 +112,7 @@ const Index = () => {
           <img
             src={mochiGate}
             alt="Khalifa Bakers – Traditional Nan Khatai bakery in Lahore"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover sm:object-cover-none"
             loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/50 to-transparent" />
@@ -131,7 +131,7 @@ const Index = () => {
         ))}
 
         {/* Added responsive horizontal padding */}
-        <div className="relative bakery-container px-4 sm:px-6 py-16 sm:py-0">
+        <div className="relative bakery-container px-4 sm:px-6 pt-16 sm:py-0">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
