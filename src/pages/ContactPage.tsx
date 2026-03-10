@@ -24,7 +24,7 @@ const ContactPage = () => {
           <span className="text-primary font-medium text-sm uppercase tracking-wider">
             Get in Touch
           </span>
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mt-2">
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mt-4">
             Contact Us
           </h1>
           <p className="text-muted-foreground mt-3">

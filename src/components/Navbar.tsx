@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone, Package, MapPin, Store } from "lucide-react";
 
 // Height of the ticker bar in pixels – used to offset the navbar
 const TICKER_HEIGHT = 40;
@@ -39,24 +39,49 @@ const Navbar = () => {
           100% { transform: translateX(-50%); }
         }
         .animate-marquee {
-          animation: marquee 25s linear infinite;
+          animation: marquee 30s linear infinite;
           will-change: transform;
         }
       `}</style>
 
-      {/* FIXED TICKER – always on top */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-red-700 text-white py-2 overflow-hidden whitespace-nowrap shadow-md">
-        <div className="animate-marquee inline-block">
-          {/* First set of messages */}
-          <span className="mx-4">Ware Delivery: Courier Fee: Rs. 499 per kg Only!</span>
-          <span className="mx-4">Original Old Lahore Mochi Gate Khalifa Bakery!</span>
-          <span className="mx-4">Call Now To Order: 03287634644</span>
-          <span className="mx-4">Lahore Flat Delivery Fee: Rs. 399 Only!</span>
-          {/* Duplicate for seamless loop */}
-          <span className="mx-4">Ware Delivery: Courier Fee: Rs. 499 per kg Only!</span>
-          <span className="mx-4">Original Old Lahore Mochi Gate Khalifa Bakery!</span>
-          <span className="mx-4">Call Now To Order: 03287634644</span>
-          <span className="mx-4">Lahore Flat Delivery Fee: Rs. 399 Only!</span>
+       {/* FIXED TICKER – always on top */}
+      <div className="fixed top-0 left-0 right-0 z-50 bg-red-800 text-white py-3 overflow-hidden whitespace-nowrap shadow-md">
+        <div className="animate-marquee inline-flex items-center">
+          {/* First set of messages with icons */}
+          <span className="mx-4 inline-flex items-center gap-1">
+            <Phone size={16} className="inline" />
+            Call Now To Order: 0309-9887464
+          </span>
+          <span className="mx-4 inline-flex items-center gap-1">
+            <Package size={16} className="inline" />
+            Lahore Flat Delivery Fee: Rs. 600 Only!
+          </span>
+          <span className="mx-4 inline-flex items-center gap-1">
+            <Package size={16} className="inline" />
+            Outside Lahore Delivery: Courier Fee: Rs. 600 per kg Only!
+          </span>
+          <span className="mx-4 inline-flex items-center gap-1">
+            <Store size={16} className="inline" />
+            Original Old Lahore Mochi Gate Khalifa Bakery!
+          </span>
+
+          {/* Duplicate set for seamless loop */}
+          <span className="mx-4 inline-flex items-center gap-1">
+            <Phone size={16} className="inline" />
+            Call Now To Order: 0309-9887464
+          </span>
+          <span className="mx-4 inline-flex items-center gap-1">
+            <Package size={16} className="inline" />
+            Lahore Flat Delivery Fee: Rs. 600 Only!
+          </span>
+          <span className="mx-4 inline-flex items-center gap-1">
+            <Package size={16} className="inline" />
+            Outside Lahore Delivery: Courier Fee: Rs. 600 per kg Only!
+          </span>
+          <span className="mx-4 inline-flex items-center gap-1">
+            <Store size={16} className="inline" />
+            Original Old Lahore Mochi Gate Khalifa Bakery!
+          </span>
         </div>
       </div>
 
