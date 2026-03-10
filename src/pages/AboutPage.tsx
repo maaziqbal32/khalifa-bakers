@@ -10,7 +10,7 @@ const values = [
 ];
 
 const AboutPage = () => (
-  <div className="min-h-screen pt-24 pb-16">
+  <div className="min-h-screen pt-28 sm:pt-32  pb-16">
     <div className="bakery-container">
       <motion.div
         initial={{ opacity: 0, y: 20 }}

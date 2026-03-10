@@ -14,7 +14,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen pt-24 pb-16">
+    <div className="min-h-screen pt-28 sm:pt-32  pb-16">
       <div className="bakery-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -91,7 +91,7 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">{item.label}</p>
-                  <p className="font-medium text-foreground">{item.value}</p>
+                  <p className="font-medium text-foreground ">{item.value}</p>
                 </div>
               </motion.a>
             ))}
