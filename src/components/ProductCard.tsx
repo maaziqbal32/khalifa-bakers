@@ -16,7 +16,7 @@ const ProductCard = ({
   description,
   delay = 0,
 }: ProductCardProps) => {
-  const whatsappUrl = `https://wa.me/923127079861?text=Hi!%20I%20would%20like%20to%20order%20${encodeURIComponent(name)}.`;
+  const whatsappUrl = `https://wa.me/923287634644?text=Hi!%20I%20would%20like%20to%20order%20${encodeURIComponent(name)}.`;
 
   return (
     <motion.div

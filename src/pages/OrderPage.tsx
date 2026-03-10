@@ -14,7 +14,7 @@ const OrderPage = () => {
     e.preventDefault();
     const text = `🍪 *New Order - Khalifa Bakers*\n\n👤 *Name:* ${form.name}\n📦 *Order:* ${form.order}\n📝 *Special Requests:* ${form.special || "None"}\n\nPlease confirm my order. Thank you! 😊`;
     window.open(
-      `https://wa.me/923127079861?text=${encodeURIComponent(text)}`,
+      `https://wa.me/923287634644?text=${encodeURIComponent(text)}`,
       "_blank",
     );
   };

@@ -24,68 +24,68 @@ const featuredProducts = [
   {
     name: "Almond Nan Khatai (Full Box)",
     image: almondNaanKhatai,
-    price: "Rs 3,500",
+    price: "Rs 3,250",
     description: "Premium almond-topped shortbread cookies – full box",
   },
   {
     name: "Half Almond Khatai (Half Box)",
     image: almondNaanKhatai,
-    price: "Rs 1,750",
+    price: "Rs 1,650",
     description: "Half box of our signature almond delight",
   },
   {
     name: "Plain Nan Khatai (Full Box)",
     image: plainNaanKhatai,
-    price: "Rs 1,200",
+    price: "Rs 2,650",
     description: "Classic melt-in-your-mouth cookies",
   },
   {
     name: "Plain Nan Khatai (Half Box)",
     image: plainNaanKhatai,
-    price: "Rs 600",
+    price: "Rs 1,350",
     description: "Half box of our classic delight",
   },
   {
     name: "Butter Toffee",
     image: burfiToffee,
-    price: "Rs 800",
+    price: "Rs 3,300",
     description: "Traditional milk fudge sweets",
   },
   {
     name: "Bakar Khani",
     image: bakarKhani,
-    price: "Rs 600",
+    price: "Rs 2,850",
     description: "Flaky layered pastry bread",
   },
   {
     name: "Cake Rusk",
     image: cakeRusk,
-    price: "Rs 500",
+    price: "Rs 2,700",
     description: "Crispy twice-baked tea companions",
   },
   {
     name: "Panjeeri",
     image: panjeeri,
-    price: "Rs 900",
+    price: "Rs 6,000",
     description: "Nutritious traditional sweet powder",
   },
 ];
 
 const bestSellers = [
   {
-    name: "Almond Nan Khatai",
+    name: "Almond Nan Khatai (Full Box)",
     image: almondNaanKhatai,
-    price: "Rs 3,500",
+    price: "Rs 3,250",
     rating: 5,
   },
   {
     name: "Plain Nan Khatai (Full Box)",
     image: plainNaanKhatai,
-    price: "Rs 1,200",
+    price: "Rs 2,650",
     rating: 5,
   },
-  { name: "Cake Rusk", image: cakeRusk, price: "Rs 500", rating: 5 },
-  { name: "Bakar Khani", image: bakarKhani, price: "Rs 600", rating: 5 },
+  { name: "Cake Rusk", image: cakeRusk, price: "Rs 2,700", rating: 5 },
+  { name: "Bakar Khani", image: bakarKhani, price: "Rs 2,850", rating: 5 },
 ];
 
 const floatingIcons = [
@@ -107,7 +107,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative min-h-[100vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[100vh]  mt-[50px] sm:mt-[100px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={mochiGate}
@@ -156,7 +156,7 @@ const Index = () => {
             </p>
             <div className="flex flex-nowrap gap-2 sm:gap-4">
               <motion.a
-                href="https://wa.me/923127079861?text=Hello%20Khalifa%20Bakers%2C%20I%20would%20like%20to%20place%20an%20order.%0A%0AProduct%3A%0AQuantity%3A%0ADelivery%20Address%3A"
+                href="https://wa.me/923287634644?text=Hello%20Khalifa%20Bakers%2C%20I%20would%20like%20to%20place%20an%20order.%0A%0AProduct%3A%0AQuantity%3A%0ADelivery%20Address%3A"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
@@ -337,7 +337,7 @@ const Index = () => {
                   </h3>
                   <p className="text-primary font-bold mt-1">{item.price}</p>
                   <motion.a
-                    href={`https://wa.me/923127079861?text=Hi!%20I%20would%20like%20to%20order%20${encodeURIComponent(item.name)}.`}
+                    href={`https://wa.me/923287634644?text=Hi!%20I%20would%20like%20to%20order%20${encodeURIComponent(item.name)}.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.03 }}

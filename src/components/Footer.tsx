@@ -42,16 +42,16 @@ const Footer = () => (
           </h4>
           <div className="flex flex-col gap-3 text-sm sm:text-base text-primary-foreground/70">
             <a
-              href="https://wa.me/923127079861"
+              href="https://wa.me/923287634644"
               className="flex items-center gap-2 hover:text-primary-foreground transition-colors"
             >
               <MessageCircle size={16} /> WhatsApp Order
             </a>
             <a
-              href="tel:+923127079861"
+              href="tel:+923287634644"
               className="flex items-center gap-2 hover:text-primary-foreground transition-colors"
             >
-              <Phone size={16} /> +92 312 7079861
+              <Phone size={16} /> 0328 7634644
             </a>
             <span className="flex items-center gap-2">
               <MapPin size={16} /> Mochi Gate, Lahore
@@ -61,8 +61,9 @@ const Footer = () => (
       </div>
       <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm sm:text-lg text-primary-foreground/60">
         <p className="flex items-center justify-center gap-1">
-          © {new Date().getFullYear()} Khalifa Bakers • Freshly baked with care
-          🥐
+          {/* © {new Date().getFullYear()} Khalifa Bakers • Freshly baked with care
+          🥐 */}
+          © 1925 - 2026 Khalifa Bakers Lahore.
         </p>
       </div>
     </div>

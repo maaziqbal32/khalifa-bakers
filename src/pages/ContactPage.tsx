@@ -8,7 +8,7 @@ const ContactPage = () => {
     e.preventDefault();
     const text = `Hi Khalifa Bakers! My name is ${form.name}. ${form.message}`;
     window.open(
-      `https://wa.me/923127079861?text=${encodeURIComponent(text)}`,
+      `https://wa.me/923287634644?text=${encodeURIComponent(text)}`,
       "_blank",
     );
   };
@@ -44,15 +44,15 @@ const ContactPage = () => {
               {
                 icon: "/whatsapp.png",
                 label: "WhatsApp",
-                value: "+92 300 1234567",
-                href: "https://wa.me/923127079861",
+                value: "+92 328 7634644",
+                href: "https://wa.me/923287634644",
                 color: "bg-whatsapp text-whatsapp-foreground",
               },
               {
                 icon: Phone,
                 label: "Phone",
-                value: "+92 300 1234567",
-                href: "tel:+923127079861",
+                value: "0328 7634644",
+                href: "tel:+923287634644",
                 color: "bg-primary text-primary-foreground",
               },
               {
