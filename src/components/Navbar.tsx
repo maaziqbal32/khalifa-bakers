@@ -50,7 +50,7 @@ const Navbar = () => {
           {/* First set of messages with icons */}
           <span className="mx-4 inline-flex items-center gap-1">
             <Phone size={16} className="inline" />
-            Call Now To Order: 0309-9887464
+            Call Now To Order: 0328-7634644
           </span>
           <span className="mx-4 inline-flex items-center gap-1">
             <Package size={16} className="inline" />
@@ -68,7 +68,7 @@ const Navbar = () => {
           {/* Duplicate set for seamless loop */}
           <span className="mx-4 inline-flex items-center gap-1">
             <Phone size={16} className="inline" />
-            Call Now To Order: 0309-9887464
+            Call Now To Order: 0328-7634644
           </span>
           <span className="mx-4 inline-flex items-center gap-1">
             <Package size={16} className="inline" />
