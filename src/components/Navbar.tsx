@@ -54,11 +54,11 @@ const Navbar = () => {
           </span>
           <span className="mx-4 inline-flex items-center gap-1">
             <Package size={16} className="inline" />
-            Lahore Flat Delivery Fee: Rs. 600 Only!
+            Lahore Flat Delivery Fee: Rs. 399 Only!
           </span>
           <span className="mx-4 inline-flex items-center gap-1">
             <Package size={16} className="inline" />
-            Outside Lahore Delivery: Courier Fee: Rs. 600 per kg Only!
+            Outside Lahore Delivery: Courier Fee: Rs. 499 per kg Only!
           </span>
           <span className="mx-4 inline-flex items-center gap-1">
             <Store size={16} className="inline" />
@@ -72,11 +72,11 @@ const Navbar = () => {
           </span>
           <span className="mx-4 inline-flex items-center gap-1">
             <Package size={16} className="inline" />
-            Lahore Flat Delivery Fee: Rs. 600 Only!
+            Lahore Flat Delivery Fee: Rs. 399 Only!
           </span>
           <span className="mx-4 inline-flex items-center gap-1">
             <Package size={16} className="inline" />
-            Outside Lahore Delivery: Courier Fee: Rs. 600 per kg Only!
+            Outside Lahore Delivery: Courier Fee: Rs. 499 per kg Only!
           </span>
           <span className="mx-4 inline-flex items-center gap-1">
             <Store size={16} className="inline" />

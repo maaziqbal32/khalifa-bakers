@@ -53,6 +53,12 @@ const Footer = () => (
             >
               <Phone size={16} /> 0328 7634644
             </a>
+            <a
+              href="mailto:khalifabakers.1925.org@gmail.com"
+              className="flex items-center gap-2 hover:text-primary-foreground transition-colors"
+            >
+              <Heart size={16} /> khalifabakers.1925.org@gmail.com
+            </a>
             <span className="flex items-center gap-2">
               <MapPin size={16} /> Mochi Gate, Lahore
             </span>

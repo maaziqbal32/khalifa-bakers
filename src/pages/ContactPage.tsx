@@ -58,8 +58,8 @@ const ContactPage = () => {
               {
                 icon: Mail,
                 label: "Email",
-                value: "info@khalifabakers.com",
-                href: "https://mail.google.com/mail/?view=cm&fs=1&to=info@khalifabakers.com",
+                value: "khalifabakers.1925.org@gmail.com",
+                href: "https://mail.google.com/mail/?view=cm&fs=1&to=khalifabakers.1925.org@gmail.com",
                 color: "bg-accent text-accent-foreground",
               },
               {
